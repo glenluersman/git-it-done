@@ -45,8 +45,7 @@ var getUserRepos = function(user) {
           repoContainerEl.textContent = "No repositories found.";
           return;
       }
-      // clear old content
-      repoContainerEl.textContent = "";
+      
       repoSearchTerm.textContent = searchTerm;
 
       // loop over repos
@@ -56,7 +55,7 @@ var getUserRepos = function(user) {
 
           // create a container for each repo
           var repoEl = document.createElement("div");
-          repoEl.classList = "list-item flex-row justify-content-space-between align-center";
+          repoEl.classList = "list-item flex-row justify-space-between align-center";
 
           // create a span element to hold repository name\
           var titleEl = document.createElement("span");
