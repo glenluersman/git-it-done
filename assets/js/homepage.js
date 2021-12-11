@@ -34,6 +34,7 @@ var getUserRepos = function(user) {
 
       if (username) {
         getUserRepos(username);
+        repoContainerEl.textContent = "";
         nameInputEl.value = "";
       } else {
         alert("Please enter a GitHub username");
@@ -113,11 +114,9 @@ var getUserRepos = function(user) {
       //clear old content
       repoContainerEl.textContent = "";
     }
-  }
+  };
 
   languageButtonsEl.addEventListener("click", buttonClickHandler);
 
   userFormEl.addEventListener("submit", formSubmitHandler);
-
-  getUserRepos()
   
